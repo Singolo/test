@@ -10,23 +10,17 @@ public class SpawnBomb : MonoBehaviour {
     public Text bombCounterText;
     public Text scoresText;
     public int BombCount;
-
-    // Use this for initialization
+    
     void Start ()
     {
         SetBombCount();
     }
-	
-	// Update is called once per frame
 	void FixedUpdate ()
     {
         Spawn();
         if (BombCount == 0)
             Invoke("CountScores", 2.0f);
     } 
-
-    
-
     private void Spawn()
     {
         if (Input.GetMouseButtonDown(0) && BombCount > 0)
