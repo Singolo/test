@@ -45,6 +45,8 @@ public class Explosion : MonoBehaviour {
 
         float power = maxPower;
 
+
+        //Rewrite with direction.normalize
         if ((absDirection.x < radius * 0.33f) && (absDirection.y < radius * 0.33f))
             power = maxPower;
         else if ((absDirection.x < radius * 0.66f) && (absDirection.y < radius * 0.66f))
